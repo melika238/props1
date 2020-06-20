@@ -5,25 +5,25 @@ const ProductTable = (props) =>{
 
     return(
         <>
-
+	    <table>
+	    <tr>
+	    <th>name </th>
+	    <th>category </th>
+	    <th>price </th>
+	    </tr>
+	    {props.products.map(product =>{ return (
+	    <tr>
+	    <td>{product.name}</td>
+	    <td>{product.category}</td>
+	    <td>{product.price}</td>
+	    </tr>)}}
+	    </table>
         </>
     )
     }
-    
-
-
-let    = [];
-function ProductTable (){
-    return products.map((product)=>{
-        console.log(`category ${product.category},price ${product.price}`);
-		
-		return product;
-   })}
+   
    ProductTable.propTypes = {
-    price:PropTypes.number,
-    product:PropTypes.array,
-    category: PropTypes.string,
-  }
+    products:PropTypes.array,
   
 
 
